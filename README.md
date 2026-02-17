@@ -25,3 +25,8 @@ uvicorn backend.api.main:app --reload
 ```bash
 pytest -q
 ```
+
+
+### Notes
+
+- `zstandard` is optional at runtime; if not installed, memory compression automatically falls back to `zlib`.
