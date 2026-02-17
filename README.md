@@ -30,3 +30,8 @@ pytest -q
 ### Notes
 
 - `zstandard` is optional at runtime; if not installed, memory compression automatically falls back to `zlib`.
+
+
+### Python compatibility
+
+- Requirements are set as compatible ranges (not old hard pins) to prefer prebuilt wheels on Python 3.13 and avoid local Rust/C builds during install.
