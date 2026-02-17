@@ -113,3 +113,13 @@ async def get_report(thread_id: str, format: str = "html"):
     if format == "pdf":
         return {"thread_id": thread_id, "format": "pdf", "content": "PDF generation placeholder"}
     return {"thread_id": thread_id, "format": "html", "content": engagement_data}
+
+
+@app.get("/")
+async def root():
+    return {"service": "Autonomous Pentest Platform", "status": "ok"}
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+async def favicon():
+    return {"detail": "no favicon"}
